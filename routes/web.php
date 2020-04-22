@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController');
-Route::post('/', 'FormController');
+Route::post('/', 'FormController')->name('form');
