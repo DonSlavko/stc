@@ -3,14 +3,9 @@
 @section('content')
 <div class="section section-header" id="header">
     <div class="parallax pattern-image filter filter-color-black" data-color="black">
-
-{{--
-        <div id="particles-js" style='background-image: url("assets/img/rubik_background.jpg"); background-size: inherit'></div>
---}}
-        <img alt="..." src="assets/img/rubik_background.jpg">
         <div class="container">
             <div class="content">
-                <img height="120px" src="assets/img/logo.png" alt="">
+                <img height="120px" src="{{ asset('storage/img/logo.png') }}" alt="ST Logo">
                 <h3>ST COMPANY</h3>
                 <div class="separator-container">
                     <div class="separator line-separator">✻</div>
@@ -35,15 +30,6 @@
                         <div class="separator line-separator">✻</div>
                     </div>
                     <p class="large">ST Company is dedicated group of programmers who's purpose is to bring you better experience with web applications.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="carousel">
-        <div id="section-we-are-1" class="carousel slide add-animation-stopped-1" data-interval="20000">
-            <div class="carousel-inner pattern-image animate">
-                <div class="item active">
-                    <img alt="..." class="full-image" src="assets/img/rubik_background2.jpg">
                 </div>
             </div>
         </div>

@@ -2,13 +2,8 @@
 
 <footer class="footer footer-color-black" data-color="black">
     <div class="container">
-        <nav class="pull-left">
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
         <div class="social-area pull-right">
-            <a class="btn btn-social btn-pinterest btn-simple">
+            <a class="btn btn-social btn-pinterest btn-simple" href="https://www.linkedin.com/company/stc20">
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>

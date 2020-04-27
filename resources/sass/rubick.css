@@ -583,7 +583,7 @@ body > .navbar-collapse a {
 }
 
 .navbar.navbar-fixed-top {
-  transition: all .5s .1s;
+  transition: all .3s .1s;
 }
 
 .footer {
@@ -1861,6 +1861,10 @@ a:hover {
   overflow: hidden;
   display: block;
   position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../storage/img/rubik_background.jpg");
 }
 .section .parallax > img,
 .section .parallax .filter > img, .section .full-image > img,
@@ -1880,7 +1884,8 @@ a:hover {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 100vh;
+  background-image:url("../storage/img/rubik_background.jpg")
 }
 .section .nav > li {
   display: inline-block;
@@ -2204,7 +2209,7 @@ a,
   content: "";
   opacity: .4;
   background: #000;
-  background: url("../img/pattern.png");
+  background: url("../storage/img/pattern.png");
 }
 
 .filter {
@@ -2455,12 +2460,12 @@ a.carousel-control span.fa {
 }
 .section-we-are-1 #carousel .left,
 .section-we-are-2 #carousel .left {
-  cursor: url(../img/arrow-left.png), url(../img/arrow-left.cur), default !important;
+  cursor: url("../storage/img/arrow-left.png"), url("../storage/img/arrow-left.cur"), default !important;
   /* Built-in fallback */
 }
 .section-we-are-1 #carousel .right,
 .section-we-are-2 #carousel .right {
-  cursor: url(../img/arrow-right.png), url(../img/arrow-right.cur), default !important;
+  cursor: url("../storage/img/arrow-right.png"), url("../storage/img/arrow-right.cur"), default !important;
   /* Built-in fallback */
 }
 
@@ -2543,7 +2548,7 @@ body.noscroll {
   left: 0;
   width: 100%;
   height: auto;
-  background: url("../img/pattern.png");
+  background: url("../storage/img/pattern.png");
   z-index: 2;
   content: "";
 }
@@ -3519,6 +3524,16 @@ body.noscroll {
   display: block;
 }
 
+@media (max-width: 992px) {
+  .section .parallax, .section .full-image {
+    background-image: url("../storage/img/rubik_responsive.jpg");
+  }
+  .section .responsive-background {
+    background-image:url("../storage/img/rubik_responsive.jpg")
+  }
+
+}
+
 @media (min-width: 768px) {
   .section-contact-3 {
     min-height: 570px;
@@ -3678,12 +3693,7 @@ body.noscroll {
   .section-header {
     padding: 0 !important;
   }
-  .section-header .parallax, .section-header .full-image {
-    height: 80vh;
-  }
-  .section-header .parallax:after, .section-header .full-image:after {
-    height: 80vh;
-  }
+
   .section-header .content {
     top: 50%;
   }

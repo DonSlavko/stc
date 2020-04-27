@@ -11,5 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/assets/js')
-   .sass('resources/sass/app.scss', 'public/assets/css');
+mix.js('resources/js/rubick.js', 'public/js/custom.js')
+    .styles([
+        'resources/sass/rubick.css',
+        'resources/sass/fonts/pe-icon-7-stroke.css',
+        'resources/sass/fonts/Rubik-Fonts.css'
+    ], 'public/css/custom.css')
+    .styles('resources/sass/bootstrap.css', 'public/css/bootstrap.css')
