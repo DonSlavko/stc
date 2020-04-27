@@ -1864,7 +1864,7 @@ a:hover {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("../storage/img/rubik_background.jpg");
+  background-image: url("../img/rubik_background.jpg");
 }
 .section .parallax > img,
 .section .parallax .filter > img, .section .full-image > img,
@@ -1885,7 +1885,7 @@ a:hover {
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
-  background-image:url("../storage/img/rubik_background.jpg")
+  background-image:url("../img/rubik_background.jpg")
 }
 .section .nav > li {
   display: inline-block;
@@ -2209,7 +2209,7 @@ a,
   content: "";
   opacity: .4;
   background: #000;
-  background: url("../storage/img/pattern.png");
+  background: url("../img/pattern.png");
 }
 
 .filter {
@@ -2460,12 +2460,12 @@ a.carousel-control span.fa {
 }
 .section-we-are-1 #carousel .left,
 .section-we-are-2 #carousel .left {
-  cursor: url("../storage/img/arrow-left.png"), url("../storage/img/arrow-left.cur"), default !important;
+  cursor: url("../img/arrow-left.png"), url("../img/arrow-left.cur"), default !important;
   /* Built-in fallback */
 }
 .section-we-are-1 #carousel .right,
 .section-we-are-2 #carousel .right {
-  cursor: url("../storage/img/arrow-right.png"), url("../storage/img/arrow-right.cur"), default !important;
+  cursor: url("../img/arrow-right.png"), url("../img/arrow-right.cur"), default !important;
   /* Built-in fallback */
 }
 
@@ -2548,7 +2548,7 @@ body.noscroll {
   left: 0;
   width: 100%;
   height: auto;
-  background: url("../storage/img/pattern.png");
+  background: url("../img/pattern.png");
   z-index: 2;
   content: "";
 }
@@ -3526,10 +3526,10 @@ body.noscroll {
 
 @media (max-width: 992px) {
   .section .parallax, .section .full-image {
-    background-image: url("../storage/img/rubik_responsive.jpg");
+    background-image: url("../img/rubik_responsive.jpg");
   }
   .section .responsive-background {
-    background-image:url("../storage/img/rubik_responsive.jpg")
+    background-image:url("../img/rubik_responsive.jpg")
   }
 
 }

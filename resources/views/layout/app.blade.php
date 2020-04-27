@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="{{ asset('storage/img/logo.png') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}"/>
     <title>ST Company</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
 
@@ -20,7 +20,7 @@
 <div class="loading ">
     <div class="loading-container">
         <p>Fetching...</p>
-        <img class="loader" src="{{ asset('storage/img/rubik.svg') }}" alt="Loading..."/>
+        <img class="loader" src="{{ asset('img/rubik.svg') }}" alt="Loading..."/>
     </div>
 </div>
 
