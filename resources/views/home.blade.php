@@ -5,7 +5,7 @@
     <div class="parallax pattern-image filter filter-color-black" data-color="black">
         <div class="container">
             <div class="content">
-                <img height="120px" src="{{ asset('storage/img/logo.png') }}" alt="ST Logo">
+                <img height="120px" src="{{ asset('img/logo.png') }}" alt="ST Logo">
                 <h3>ST COMPANY</h3>
                 <div class="separator-container">
                     <div class="separator line-separator">✻</div>
