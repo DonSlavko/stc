@@ -9,7 +9,7 @@
                 <img class="logo-responsive" src="{{ asset('img/logo.png') }}" alt="ST Logo">
                 <h3>ST COMPANY</h3>
                 <div class="separator-container">
-                    <div class="separator line-separator">∎</div>
+                    <div class="separator line-separator">⌘</div>
                 </div>
                 <h5>Where ideas get committed and dreams become git.</h5>
             </div>
@@ -28,7 +28,7 @@
                     <h5 class="text-gray">Little about us</h5>
                     <h2>Who we are</h2>
                     <div class="separator-container">
-                        <div class="separator line-separator">∎</div>
+                        <div class="separator line-separator">⌘</div>
                     </div>
                     <p class="large">ST Company is dedicated group of programmers who's purpose is to bring you better experience with web applications.</p>
                 </div>
@@ -44,7 +44,7 @@
                 <h5 class="text-gray">Our skills</h5>
                 <h2>What we do</h2>
                 <div class="separator-container">
-                    <div class="separator line-separator">∎</div>
+                    <div class="separator line-separator">⌘</div>
                 </div>
             </div>
             <div class="col-md-10 col-md-offset-1">
@@ -97,7 +97,7 @@
             <div class="title add-animation">
                 <h2>Get in Touch</h2>
                 <div class="separator-container">
-                    <div class="separator line-separator">∎</div>
+                    <div class="separator line-separator">⌘</div>
                 </div>
                 <p>Would you want to talk about something? Just send me your message and I will happily chat</p>
             </div>
