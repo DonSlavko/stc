@@ -71,15 +71,15 @@ $(document).ready(function(){
     }
 
     setTimeout(function(){
-         $('.loading').css('opacity','0');
-         setTimeout(function(){
-             $('.loading').addClass('hide');
-         }, 500);
-     }, 3000);
+        $('.loading').css('opacity','0');
+        setTimeout(function(){
+            $('.loading').addClass('hide');
+        }, 500);
+    }, 3000);
 
 
     if($('#contactUsMap').length != 0){
-        rubik.initGoogleMaps();
+
     }
 
     if($('.content-with-opacity').length != 0){
@@ -90,13 +90,9 @@ $(document).ready(function(){
 
 
 $(window).load(function(){
-
-    //after the content is loaded we reinitialize all the waypoints for the animations
     rubik.initAnimationsCheck();
-
 });
 
-//activate collapse right menu when the windows is resized
 $(window).resize(function(){
     if($(window).width() < 992){
         rubik.initRightMenu();
@@ -109,15 +105,15 @@ $(window).resize(function(){
 });
 
 $(window).on('scroll',function(){
-   rubik.checkScrollForTransparentNavbar();
+    rubik.checkScrollForTransparentNavbar();
 
-   if(window_width > 992){
+    if(window_width > 992){
         rubik.checkScrollForParallax();
-   }
+    }
 
-   if(content_opacity == 1){
-       rubik.checkScrollForContentTransitions();
-   }
+    if(content_opacity == 1){
+        rubik.checkScrollForContentTransitions();
+    }
 });
 
 $('a[data-scroll="true"]').click(function(e){
@@ -128,7 +124,7 @@ $('a[data-scroll="true"]').click(function(e){
         e.preventDefault();
 
         $('html, body').animate({
-             scrollTop: $(scroll_target).offset().top - 50
+            scrollTop: $(scroll_target).offset().top - 50
         }, 1000);
     }
 
@@ -136,21 +132,21 @@ $('a[data-scroll="true"]').click(function(e){
 
 $('.section-we-made-2 .scroller').mousemove(
     function( event ){
-      if (!Modernizr.touch) {
-        if(event.clientX < 200) {
-            $(this).css("transform","translateX(0)");
-        }
-        if(event.clientX > 200 && event.clientX < $(window).width()-200 && event.clientX % 2 == 0 ) {
-            pixels = -event.clientX * scroll;
+        if (!Modernizr.touch) {
+            if(event.clientX < 200) {
+                $(this).css("transform","translateX(0)");
+            }
+            if(event.clientX > 200 && event.clientX < $(window).width()-200 && event.clientX % 2 == 0 ) {
+                pixels = -event.clientX * scroll;
 
-            $(this).css("transform","translateX(" + pixels + "px)");
+                $(this).css("transform","translateX(" + pixels + "px)");
+            }
+            if(event.clientX > $(window).width()-200) {
+                pixels = -(2500 - $(window).width());
+                $(this).css("transform","translateX(" + pixels + "px)");
+            }
+            $('.projects').css('overflow','hidden');
         }
-        if(event.clientX > $(window).width()-200) {
-            pixels = -(2500 - $(window).width());
-            $(this).css("transform","translateX(" + pixels + "px)");
-        }
-        $('.projects').css('overflow','hidden');
-      }
     }
 );
 
@@ -162,25 +158,25 @@ rubik = {
     },
     initAnimationsCheck: function(){
         $('[class*="add-animation"]').each(function(){
-           offset_diff = 30;
-           if($(this).hasClass('title')){
-               offset_diff = 110;
-           }
+            offset_diff = 30;
+            if($(this).hasClass('title')){
+                offset_diff = 110;
+            }
 
-           var waypoints = $(this).waypoint(function(direction) {
+            var waypoints = $(this).waypoint(function(direction) {
                 if(direction == 'down'){
-                        $(this.element).addClass('animate');
-                   } else {
-                       $(this.element).removeClass('animate');
-                   }
-                }, {
-                  offset: window_height - offset_diff
-           });
+                    $(this.element).addClass('animate');
+                } else {
+                    $(this.element).removeClass('animate');
+                }
+            }, {
+                offset: window_height - offset_diff
+            });
         });
 
     },
     initRightMenu: function(){
-         if(!navbar_initialized){
+        if(!navbar_initialized){
             $nav = $('nav[role="navigation"]');
             $nav.addClass('navbar-burger');
 
@@ -201,9 +197,9 @@ rubik = {
             background_image = $navbar.data('nav-image');
             if(background_image != undefined){
                 $navbar.css('background',"url('" + background_image + "')")
-                       .removeAttr('data-nav-image')
-                       .css('background-size',"cover")
-                       .addClass('has-image');
+                    .removeAttr('data-nav-image')
+                    .css('background-size',"cover")
+                    .addClass('has-image');
             }
 
             $toggle = $('.navbar-toggle');
@@ -222,23 +218,19 @@ rubik = {
                     e.preventDefault();
 
                     $('html, body').animate({
-                         scrollTop: $(scroll_target).offset().top - 50
+                        scrollTop: $(scroll_target).offset().top - 50
                     }, 1000);
                 }
-
-             });
-
+            });
 
             $toggle.click(function (){
-
                 if(rubik.misc.navbar_menu_visible == 1) {
                     $('html').removeClass('nav-open');
                     rubik.misc.navbar_menu_visible = 0;
                     $('#bodyClick').remove();
-                     setTimeout(function(){
+                    setTimeout(function(){
                         $toggle.removeClass('toggled');
-                     }, 550);
-
+                    }, 550);
                 } else {
                     setTimeout(function(){
                         $toggle.addClass('toggled');
@@ -249,69 +241,65 @@ rubik = {
                         $('html').removeClass('nav-open');
                         rubik.misc.navbar_menu_visible = 0;
                         $('#bodyClick').remove();
-                         setTimeout(function(){
+                        setTimeout(function(){
                             $toggle.removeClass('toggled');
-                         }, 550);
+                        }, 550);
                     });
 
                     $('html').addClass('nav-open');
                     rubik.misc.navbar_menu_visible = 1;
-
                 }
             });
             navbar_initialized = true;
         }
-
     },
 
     checkScrollForTransparentNavbar: debounce(function() {
-        	if($(document).scrollTop() > 220 ) {
-                if(transparent) {
-                    transparent = false;
-                    $('nav[role="navigation"]').removeClass('navbar-transparent');
-                }
-            } else {
-                if( !transparent ) {
-                    transparent = true;
-                    $('nav[role="navigation"]').addClass('navbar-transparent');
-                }
+        if($(document).scrollTop() > 100 ) {
+            if(transparent) {
+                transparent = false;
+                $('nav[role="navigation"]').removeClass('navbar-transparent');
             }
+        } else {
+            if( !transparent ) {
+                transparent = true;
+                $('nav[role="navigation"]').addClass('navbar-transparent');
+            }
+        }
     }, 17),
 
     checkScrollForParallax: debounce(function() {
-        	no_of_elements = 0;
-        	$('.parallax').each(function() {
-        	    var $elem = $(this);
+        no_of_elements = 0;
+        $('.parallax').each(function() {
+            var $elem = $(this);
 
-        	    if(isElementInViewport($elem)){
-                  var parent_top = $elem.offset().top;
-                  var window_bottom = $(window).scrollTop();
-                  var $image = $elem.children('img');
+            if(isElementInViewport($elem)){
+                var parent_top = $elem.offset().top;
+                var window_bottom = $(window).scrollTop();
+                var $image = $elem.children('img');
 
-            	  oVal = ((window_bottom - parent_top) / 3);
-                  $image.css('transform','translate3d(0px, ' + oVal + 'px, 0px)');
-        	    }
-            });
-
+                oVal = ((window_bottom - parent_top) / 3);
+                $image.css('transform','translate3d(0px, ' + oVal + 'px, 0px)');
+            }
+        });
     }, 6),
 
     checkScrollForContentTransitions: debounce(function() {
-         $('.content-with-opacity').each(function() {
-             var $content = $(this);
+        $('.content-with-opacity').each(function() {
+            var $content = $(this);
 
-             if(isElementInViewport($content)){
-                  var window_top = $(window).scrollTop();
-            	  opacityVal = 1 - (window_top / 230);
+            if(isElementInViewport($content)){
+                var window_top = $(window).scrollTop();
+                opacityVal = 1 - (window_top / 230);
 
-                  if(opacityVal < 0){
-                      opacityVal = 0;
-                      return;
-                  } else {
+                if(opacityVal < 0){
+                    opacityVal = 0;
+                    return;
+                } else {
                     $content.css('opacity',opacityVal);
-                  }
-
-        	    }
-         });
+                }
+            }
+        });
     }, 6),
 
     showModal: function(button){
@@ -329,30 +317,30 @@ rubik = {
         modal = $('#' + id);
 
         $(modal).css({
-         'top'  :    projectTop,
-         'left' :    projectLeft,
-         'width' :   projectWidth,
-         'height' :  projectHeight,
-         'z-index'  : '1032'
+            'top'  :    projectTop,
+            'left' :    projectLeft,
+            'width' :   projectWidth,
+            'height' :  projectHeight,
+            'z-index'  : '1032'
         });
 
         $(modal).addClass('has-background');
 
         setTimeout(function(){
-           $(modal).addClass('open');
+            $(modal).addClass('open');
         },30);
 
         setTimeout(function(){
-           $('body').addClass('noscroll');
-           $(modal).addClass('scroll');
+            $('body').addClass('noscroll');
+            $(modal).addClass('scroll');
         },1000);
 
         $('.icon-close').click(function(){
-          $project_content = $(this).closest('.project-content');
-          $project_content.removeClass('open scroll');
+            $project_content = $(this).closest('.project-content');
+            $project_content.removeClass('open scroll');
 
-          $('body').removeClass("noscroll");
-          //$('a').removeClass('no-opacity');
+            $('body').removeClass("noscroll");
+            //$('a').removeClass('no-opacity');
             setTimeout(function(){
                 $project_content.removeClass('has-background');
                 setTimeout(function(){
@@ -366,11 +354,11 @@ rubik = {
         var myLatlng = new google.maps.LatLng(44.433530, 26.093928);
 
         var mapOptions = {
-          zoom: 16,
-          center: myLatlng,
-          scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-          disableDefaultUI: true,
-          styles: [{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"on"},{"gamma":"1.82"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"gamma":"1.96"},{"lightness":"-9"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"on"},{"lightness":"25"},{"gamma":"1.00"},{"saturation":"-100"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#ffaa00"},{"saturation":"-43"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"},{"hue":"#ffaa00"},{"saturation":"-70"}]},{"featureType":"road.highway.controlled_access","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"visibility":"on"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"40"},{"visibility":"off"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"gamma":"0.80"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"off"}]}]
+            zoom: 16,
+            center: myLatlng,
+            scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+            disableDefaultUI: true,
+            styles: [{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"on"},{"gamma":"1.82"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"gamma":"1.96"},{"lightness":"-9"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"on"},{"lightness":"25"},{"gamma":"1.00"},{"saturation":"-100"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#ffaa00"},{"saturation":"-43"},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"},{"hue":"#ffaa00"},{"saturation":"-70"}]},{"featureType":"road.highway.controlled_access","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"visibility":"on"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"saturation":"-100"},{"lightness":"40"},{"visibility":"off"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"gamma":"0.80"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"off"}]}]
         }
         var map = new google.maps.Map(document.getElementById("contactUsMap"), mapOptions);
 
@@ -379,40 +367,31 @@ rubik = {
             title:"Hello World!"
         });
 
-        // To add the marker to the map, call setMap();
         marker.setMap(map);
     }
-
 }
 
-// Returns a function, that, as long as it continues to be invoked, will not
-// be triggered. The function will be called after it stops being called for
-// N milliseconds. If `immediate` is passed, trigger the function on the
-// leading edge, instead of the trailing.
-
 function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		clearTimeout(timeout);
-		timeout = setTimeout(function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		}, wait);
-		if (immediate && !timeout) func.apply(context, args);
-	};
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
+    };
 };
 
 
 function isElementInViewport(elem) {
     var $elem = $(elem);
 
-    // Get the scroll position of the page.
     var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
     var viewportTop = $(scrollElem).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
 
-    // Get the position of the element on the page.
     var elemTop = Math.round( $elem.offset().top );
     var elemBottom = elemTop + $elem.height();
 
