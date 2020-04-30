@@ -16,6 +16,29 @@
     <!--     Fonts and icons     -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" type='text/css' media="all">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css' media="all">
+
+    <!-- Chokes policy popup -->
+    <link rel="stylesheet" type="text/css" href="https://wpcc.io/lib/1.0.2/cookieconsent.min.css"/>
+    <script src="https://wpcc.io/lib/1.0.2/cookieconsent.min.js"></script>
+    <script>
+        setTimeout(function() {
+            window.wpcc.init({
+                "colors": {
+                    "popup": {
+                        "background":"#f6f6f6","text":"#000000","border":"#555555"
+                    },
+                    "button": {
+                        "background":"#555555","text":"#ffffff"}
+                },
+                "position":"bottom-right",
+                "padding":"small",
+                "margin":"small",
+                "transparency":"10",
+                "fontsize":"small"
+            })
+        }, 5000);
+    </script>
+    <!-- End Chokes policy popup -->
 </head>
 <body class="landing-page">
 
@@ -42,15 +65,4 @@
 <script>
     particlesJS.load('particles-js', 'assets/particles.json');
 </script>
-
-<!-- Cookie Consent by https://www.TermsFeed.com -->
-<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/3.0.0/cookie-consent.js"></script>
-<script type="text/javascript">
-    setTimeout(function() {
-        cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","website_name":"stcompany.org"});
-    }, 5000);
-</script>
-
-<noscript>Cookie Consent by <a href="https://www.TermsFeed.com/">TermsFeed Generator</a></noscript>
-<!-- End Cookie Consent -->
 </html>
