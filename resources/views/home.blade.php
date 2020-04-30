@@ -109,25 +109,25 @@
                 <div class="col-md-4">
                     <div class="form-group add-animation animation-1">
                         <label for="name">Your Full Name</label>
-                        <input id="name" type="text" name="full_name" value="" placeholder="John Doe" class="form-control">
+                        <input id="name" type="text" name="full_name" value="" placeholder="John Doe" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group add-animation animation-2">
                         <label for="email">Your Email</label>
-                        <input id="email" type="text" name="email" value="" placeholder="john.doe@gmail.com" class="form-control">
+                        <input id="email" type="text" name="email" value="" placeholder="john.doe@gmail.com" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group add-animation animation-3">
                         <label for="subject">Subject</label>
-                        <input id="subject" type="text" name="subject" value="" placeholder="Say hi" class="form-control">
+                        <input id="subject" type="text" name="subject" value="" placeholder="Say hi" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group add-animation animation-1">
                         <label for="content">Message</label>
-                        <textarea id="content" name="content" class="form-control" placeholder="Here you can write your text" rows="8"></textarea>
+                        <textarea id="content" name="content" class="form-control" placeholder="Here you can write your text" rows="8" required></textarea>
                     </div>
                     <div>
                         <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5">
