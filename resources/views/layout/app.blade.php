@@ -46,9 +46,6 @@
 <!-- Cookie Consent by https://www.TermsFeed.com -->
 <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/3.0.0/cookie-consent.js"></script>
 <script type="text/javascript">
-    /*document.addEventListener('DOMContentLoaded', function () {
-    });
-*/
     setTimeout(function() {
         cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","website_name":"stcompany.org"});
     }, 5000);
