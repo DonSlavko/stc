@@ -3,7 +3,7 @@
 <footer class="footer footer-color-black" data-color="black">
     <div class="container">
         <div class="social-area pull-right">
-            <a class="btn btn-social btn-pinterest btn-simple" href="https://www.linkedin.com/company/stc20">
+            <a class="btn btn-social btn-pinterest btn-simple" data-toggle="tooltip" title="Visit our LinkedIn page" href="https://www.linkedin.com/company/stc20"  target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>

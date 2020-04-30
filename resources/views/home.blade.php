@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <a href="" data-scroll="true" data-id="#whoWeAre" class="scroll-arrow hidden-xs hidden-sm">
+    <a href="" data-toggle="tooltip" title="More about us" data-scroll="true" data-id="#whoWeAre" class="scroll-arrow hidden-xs hidden-sm">
         <i class="fa fa-angle-down"></i>
     </a>
 </div>

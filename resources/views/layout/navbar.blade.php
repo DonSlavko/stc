@@ -26,7 +26,7 @@
                     <a href="" data-scroll="true" data-id="#contact">Contact</a>
                 </li>
                 <li class="social-links">
-                    <a href="https://www.linkedin.com/company/stc20"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/company/stc20"  data-toggle="tooltip" title="Visit our LinkedIn page" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </li>
             </ul>
         </div>
