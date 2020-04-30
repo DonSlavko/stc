@@ -11,7 +11,7 @@
                 <div class="separator-container">
                     <div class="separator line-separator">✻</div>
                 </div>
-                <h5>Where ideas get committed and dreams become git.</h5>
+                <h5>It's not just about ideas, it's about making ideas.</h5>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
                     <div class="separator-container">
                         <div class="separator line-separator">✻</div>
                     </div>
-                    <p class="large">ST Company is dedicated group of programmers who's purpose is to bring you better experience with web applications.</p>
+                    <p class="large">ST is a dedicated group of developers whose purpose is to bring you a better web application experience. We have the simplest policy in the world, a satisfied customer is the best business strategy of all.</p>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                                 <i class="fab fa-laravel"></i>
                             </div>
                             <h3>Laravel</h3>
-                            <p>We're a digital agency with our roots in graphic design.</p>
+                            <p>Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -64,7 +64,7 @@
                                 <i class="fab fa-vuejs"></i>
                             </div>
                             <h3>Vue.js</h3>
-                            <p>We love making the web a better place and we love good reasons for adding to it.</p>
+                            <p>Vue.js features an incrementally adoptable architecture that focuses on declarative rendering and component composition.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -73,7 +73,7 @@
                                 <i class="fab fa-react"></i>
                             </div>
                             <h3>React</h3>
-                            <p>We love to create awesome products and we do everything to make them outstanding.</p>
+                            <p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data change.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -82,7 +82,7 @@
                                 <i class="fab fa-aws"></i>
                             </div>
                             <h3>Amazon web service</h3>
-                            <p>We love to create awesome products and we do everything to make them outstanding.</p>
+                            <p>Whether you're looking for compute power, database storage, content delivery, or other functionality.</p>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                 <div class="separator-container">
                     <div class="separator line-separator">✻</div>
                 </div>
-                <p>Would you want to talk about something? Just send me your message and I will happily chat</p>
+                <p>If you think we can help you, feel free to contact us.</p>
             </div>
         </div>
         <div class="contact-form">
