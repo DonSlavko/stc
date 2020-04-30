@@ -40,8 +40,20 @@
 <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
 
 <script>
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
-        console.log('callback - particles.js config loaded');
-    });
+    particlesJS.load('particles-js', 'assets/particles.json');
 </script>
+
+<!-- Cookie Consent by https://www.TermsFeed.com -->
+<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/3.0.0/cookie-consent.js"></script>
+<script type="text/javascript">
+    /*document.addEventListener('DOMContentLoaded', function () {
+    });
+*/
+    setTimeout(function() {
+        cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","website_name":"stcompany.org"});
+    }, 5000);
+</script>
+
+<noscript>Cookie Consent by <a href="https://www.TermsFeed.com/">TermsFeed Generator</a></noscript>
+<!-- End Cookie Consent -->
 </html>
