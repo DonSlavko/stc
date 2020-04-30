@@ -10,7 +10,7 @@ class FormController extends Controller
 {
     public function __invoke(Request $request)
     {
-        Mail::to('slavkolazic1991@gmail.com')->send(new SendMail($request));
+        //Mail::to('slavkolazic1991@gmail.com')->send(new SendMail($request));
 
         return redirect()->back();
     }
