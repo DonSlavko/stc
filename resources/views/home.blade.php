@@ -30,7 +30,7 @@
                     <div class="separator-container">
                         <div class="separator line-separator">✻</div>
                     </div>
-                    <p class="large">ST is a dedicated group of developers whose purpose is to bring you a better web application experience. We have the simplest policy in the world, a satisfied customer is the best business strategy of all.</p>
+                    <p class="large">ST company is a dedicated group of developers whose purpose is to bring you a better web application experience. We have the simplest policy in the world, a satisfied customer is the best business strategy of all.</p>
                 </div>
             </div>
         </div>
