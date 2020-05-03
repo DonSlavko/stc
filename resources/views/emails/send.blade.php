@@ -2,8 +2,7 @@
 From: {{ $fullName }}
 <br>
 Email: {{ $email }}
-<br>
+<br><br>
 {{ $content }}
-<br>
-{{ config('app.name') }}
 @endcomponent
+
