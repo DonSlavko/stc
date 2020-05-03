@@ -20,6 +20,16 @@
     <!-- Chokes policy popup -->
     <link rel="stylesheet" type="text/css" href="https://wpcc.io/lib/1.0.2/cookieconsent.min.css"/>
     <script src="https://wpcc.io/lib/1.0.2/cookieconsent.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165396411-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-165396411-1');
+    </script>
+
     <script>
         setTimeout(function() {
             window.wpcc.init({
