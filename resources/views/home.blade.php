@@ -103,7 +103,7 @@
             </div>
         </div>
         <div class="contact-form">
-            <form action="{{ route('form') }}" method="POST">
+            <form action="{{ route('form') }}" method="POST" id="idForm">
                 {{ csrf_field() }}
                 <div class="row">
                 <div class="col-md-4">
@@ -140,6 +140,14 @@
                 </div>
             </div>
             </form>
+        </div>
+
+        <div id="formAlert" class="row" style="padding-top: 1rem; display:none;">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    Message sent successfully
+                </div>
+            </div>
         </div>
     </div>
 </div>

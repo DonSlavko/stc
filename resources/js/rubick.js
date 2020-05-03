@@ -35,6 +35,35 @@ var no_touch_screen = false;
 
 var burger_menu;
 
+$("#idForm").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var url = form.attr('action');
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: form.serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+            $('input[name="full_name"]').val("");
+            $('input[name="email"]').val("");
+            $('input[name="subject"]').val("");
+            $('textarea[name="content"]').val("");
+
+            $('#formAlert').show()
+
+            setTimeout(function () {
+                $('#formAlert').hide()
+            }, 5000)
+        }
+    });
+
+
+});
+
 
 $(document).ready(function(){
     BrowserDetect.init();
