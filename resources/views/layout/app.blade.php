@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="ST Company is a software company that develops and maintains web and mobile applications, websites, etc.">
+    <meta name="keywords" content="ST Company, Programming, Laravel, Vue.js, React, AWS">
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#ffffff">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
